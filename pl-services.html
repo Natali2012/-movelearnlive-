@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usługi — Move.Learn.Live</title>
+  <meta name="description" content="Podróże, szkolenia, wydarzenia dla duszy. Trzy formaty — jedno podejście.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+/* ===========================================
+   Move.Learn.Live — Site Styles
+   =========================================== */
+
+:root {
+  --cream-bg: #FAF3E4;
+  --cream-soft: #F2E7CE;
+  --cream-card: #FCF8EC;
+  --orange: #EF9F27;
+  --orange-dark: #BA7517;
+  --dark-text: #2C2C2A;
+  --gray-text: #5F5E5A;
+  --gray-light: #888780;
+  --border: rgba(186, 117, 23, 0.15);
+  --border-strong: rgba(186, 117, 23, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream-bg);
+  color: var(--dark-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Navigation ===== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 243, 228, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 0.5px solid var(--border);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.nav-brand svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--gray-text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--orange-dark);
+}
+
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.lang-switch a {
+  color: var(--gray-light);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.lang-switch a.active {
+  color: var(--orange-dark);
+  background: var(--cream-soft);
+}
+
+.lang-switch a:hover {
+  color: var(--orange-dark);
+}
+
+.nav-burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-burger span {
+  width: 22px;
+  height: 1.5px;
+  background: var(--dark-text);
+  transition: 0.3s;
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 100px 32px 120px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  color: var(--orange-dark);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-style: italic;
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  color: var(--dark-text);
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--gray-text);
+  max-width: 540px;
+  margin: 0 auto 44px;
+  line-height: 1.6;
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 80px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-alt {
+  background: rgba(250, 238, 218, 0.4);
+  max-width: 100%;
+}
+
+.section-alt .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 32px;
+}
+
+.section-label {
+  color: var(--orange-dark);
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  color: var(--dark-text);
+}
+
+h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--dark-text);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--dark-text);
+  margin-bottom: 18px;
+}
+
+.lead {
+  font-size: 18px;
+  color: var(--gray-text);
+  max-width: 640px;
+  line-height: 1.6;
+}
+
+/* ===== Buttons ===== */
+.cta {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--cream-bg);
+  padding: 16px 38px;
+  border-radius: 32px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cta:hover {
+  background: var(--orange-dark);
+  transform: translateY(-1px);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+.cta-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--orange-dark);
+  padding: 14px 32px;
+  border-radius: 32px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: 1px solid var(--orange);
+  transition: all 0.2s;
+}
+
+.cta-outline:hover {
+  background: var(--orange);
+  color: var(--cream-bg);
+}
+
+/* ===== Cards ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--cream-card);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 28px;
+  transition: all 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--orange);
+  box-shadow: 0 8px 24px rgba(186, 117, 23, 0.08);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--cream-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  color: var(--dark-text);
+}
+
+.card-sub {
+  font-size: 13px;
+  color: var(--orange-dark);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: var(--gray-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== Process steps ===== */
+.process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.step {
+  text-align: center;
+  padding: 16px;
+}
+
+.step-num {
+  width: 52px;
+  height: 52px;
+  background: var(--orange);
+  color: var(--cream-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.step-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--dark-text);
+}
+
+.step-desc {
+  font-size: 14px;
+  color: var(--gray-text);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ===== Two columns ===== */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.quote-block {
+  background: var(--cream-soft);
+  border-left: 3px solid var(--orange);
+  padding: 28px 32px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--orange-dark);
+  line-height: 1.5;
+  border-radius: 0 12px 12px 0;
+}
+
+/* ===== Principles list ===== */
+.principles {
+  list-style: none;
+  margin-top: 24px;
+}
+
+.principles li {
+  padding: 14px 0;
+  border-bottom: 0.5px solid var(--border);
+  font-size: 16px;
+  color: var(--dark-text);
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.principles li::before {
+  content: "—";
+  color: var(--orange);
+  font-weight: 500;
+}
+
+.principles li:last-child {
+  border-bottom: none;
+}
+
+/* ===== Contact ===== */
+.contact-section {
+  background: var(--cream-soft);
+  padding: 100px 32px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 540px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.contact-form .field {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 13px;
+  color: var(--gray-text);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--cream-bg);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--dark-text);
+  transition: border 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  font-size: 15px;
+  color: var(--dark-text);
+}
+
+.contact-info a {
+  color: var(--dark-text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.2s;
+}
+
+.contact-info a:hover {
+  border-bottom-color: var(--orange);
+}
+
+/* ===== Footer ===== */
+footer {
+  padding: 32px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-light);
+  border-top: 0.5px solid var(--border);
+}
+
+/* ===== Page-specific ===== */
+.page-header {
+  padding: 80px 32px 40px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-header .section-label {
+  margin-bottom: 12px;
+}
+
+.about-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.services-detailed {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-block {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.service-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.service-block h3 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.service-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--orange-dark);
+  background: var(--cream-soft);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.full-cycle-box {
+  background: var(--cream-soft);
+  border-radius: 14px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 56px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 16px 20px;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-burger {
+    display: flex;
+  }
+  
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream-bg);
+    padding: 24px;
+    gap: 18px;
+    border-bottom: 0.5px solid var(--border);
+  }
+  
+  h1 { font-size: 42px; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 24px; }
+  
+  .hero { padding: 60px 20px 80px; }
+  .section, .section-alt .section-inner { padding: 60px 20px; }
+  .contact-section { padding: 60px 20px; }
+  
+  .cards, .process, .two-col {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="pl-index.html" class="nav-brand">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="62" cy="28" r="14" fill="#EF9F27"/>
+        <path d="M 10 72 L 32 38 L 50 58 L 68 32 L 90 72 Z" fill="#BA7517" opacity="0.85"/>
+        <path d="M 28 72 Q 40 60 46 66 Q 52 72 48 78 L 52 92 L 38 92 Z" fill="#2C2C2A"/>
+      </svg>
+      MOVE. LEARN. LIVE.
+    </a>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="pl-index.html">Strona główna</a></li>
+      <li><a href="pl-about.html">O mnie</a></li>
+      <li><a href="pl-services.html" class="active">Usługi</a></li>
+      <li><a href="pl-contact.html">Kontakt</a></li>
+      <li class="lang-switch">
+        <a href="ua-services.html">UA</a>
+        <a href="pl-services.html" class="active">PL</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="section-label">USŁUGI</div>
+  <h1>Trzy formaty —<br>i każde Twoje zapytanie</h1>
+  <p class="lead" style="margin: 24px auto 0;">Jestem elastyczna wobec tego, czego potrzebujesz. To tylko punkty orientacyjne — co możemy stworzyć razem.</p>
+</section>
+
+<section class="section">
+  <div class="services-detailed">
+
+    <div class="service-block">
+      <h3><span class="service-tag">MOVE</span> Podróże z charakterem</h3>
+      <p>Podróż to nie „dokąd pojechać". To „z kim być", „co poczuć", „kim wrócić". Tworzę podróże, które zapamiętujesz nie po zdjęciach, a po ludziach i momentach.</p>
+      <p><strong>Co to może być:</strong></p>
+      <ul class="principles">
+        <li>Autorskie weekendy w Polsce i Europie — małe grupy, przemyślane trasy</li>
+        <li>Wycieczki edukacyjne z fokusem na kulturę, historię, sposób życia</li>
+        <li>Wyjazdy weekendowe dla grup przyjaciół i osób o podobnych zainteresowaniach</li>
+        <li>Podróże pod Twoje indywidualne zapytanie — tworzymy trasę i towarzystwo dopasowane do Ciebie</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3><span class="service-tag">LEARN</span> Szkolenia i wydarzenia edukacyjne</h3>
+      <p>Nauka, która nie zostaje wykładem, a zamienia się w doświadczenie. Wykorzystuję moje 14-letnie doświadczenie dydaktyczne i wiedzę akademicką, by wydarzenia naprawdę zmieniały ludzi, a nie tylko zapełniały czas.</p>
+      <p><strong>Co to może być:</strong></p>
+      <ul class="principles">
+        <li>Warsztaty i intensywne szkolenia — jeden temat, głęboka analiza</li>
+        <li>Programy capacity building dla zespołów i organizacji</li>
+        <li>Szkolenia korporacyjne z nieszablonowym podejściem</li>
+        <li>Spotkania edukacyjne i cykle zajęć dla stałych grup</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3><span class="service-tag">LIVE</span> Wydarzenia dla duszy</h3>
+      <p>Przestrzeń, w której chce się być. Bez pośpiechu, bez formalności, bez „obowiązkowego programu". Po prostu ludzie, którzy na chwilę wychodzą z rytmu codzienności — by przypomnieć sobie coś ważnego o sobie.</p>
+      <p><strong>Co to może być:</strong></p>
+      <ul class="principles">
+        <li>Spotkania tematyczne — wieczory wokół jednego tematu, jednego sensu</li>
+        <li>Wyjazdy regeneracyjne — krótkie, ale głębokie</li>
+        <li>Integracje firmowe, które się zapamiętuje</li>
+        <li>Wydarzenia dla zespołów, partnerów, szczególnych grup</li>
+      </ul>
+    </div>
+
+    <div class="full-cycle-box">
+      <h3>Od pomysłu do ostatniego szczegółu</h3>
+      <p style="max-width: 600px; margin: 0 auto;">Bierzemy na siebie wszystko: koncepcję, lokalizację, logistykę, prowadzących, materiały prezentacyjne, produkcję. Jeden partner zamiast dziesięciu podwykonawców.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="section-label">OMÓWMY TWOJE ZAPYTANIE</div>
+  <h2>Masz pomysł? Napisz.</h2>
+  <p class="lead" style="margin: 0 auto;">Opowiedz, co Cię interesuje — pomogę zrealizować.</p>
+  <p style="margin-top: 36px;"><a class="cta" href="pl-contact.html">Napisz</a></p>
+</section>
+
+<footer>
+  © 2026 Move.Learn.Live · Natalia Potaman · Słubice, Polska
+</footer>
+
+<script>
+// Move.Learn.Live — minimal site JS
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu toggle
+  const burger = document.querySelector('.nav-burger');
+  const links = document.querySelector('.nav-links');
+  if (burger && links) {
+    burger.addEventListener('click', function() {
+      links.classList.toggle('open');
+    });
+  }
+  
+  // Mark current page in nav
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    const href = link.getAttribute('href');
+    if (href && currentPath.endsWith(href)) {
+      link.classList.add('active');
+    }
+  });
+});
+
+</script>
+</body>
+</html>
