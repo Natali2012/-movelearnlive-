@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt — Move.Learn.Live</title>
+  <meta name="description" content="Skontaktuj się z Move.Learn.Live. Natalia Potaman, Słubice, Polska.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="62" cy="28" r="14" fill="#EF9F27"/>
+        <path d="M 10 72 L 32 38 L 50 58 L 68 32 L 90 72 Z" fill="#BA7517" opacity="0.85"/>
+        <path d="M 28 72 Q 40 60 46 66 Q 52 72 48 78 L 52 92 L 38 92 Z" fill="#2C2C2A"/>
+      </svg>
+      MOVE. LEARN. LIVE.
+    </a>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="about.html">O mnie</a></li>
+      <li><a href="services.html">Usługi</a></li>
+      <li><a href="contact.html" class="active">Kontakt</a></li>
+      <li class="lang-switch">
+        <a href="../ua/contact.html">UA</a>
+        <a href="../pl/contact.html" class="active">PL</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="section-label">KONTAKT</div>
+  <h1>Zacznijmy poznawanie</h1>
+  <p class="lead" style="margin: 24px auto 0;">Opowiedz, co Cię interesuje — odpowiem osobiście.</p>
+</section>
+
+<section class="section" style="max-width: 600px;">
+  <form class="contact-form" action="https://formsubmit.co/hello@movelearnlive.com" method="POST">
+    <input type="hidden" name="_subject" value="Nowe zapytanie ze strony Move.Learn.Live">
+    <input type="hidden" name="_template" value="table">
+    
+    <div class="field">
+      <label for="name">Jak masz na imię</label>
+      <input type="text" id="name" name="Imię" required>
+    </div>
+    <div class="field">
+      <label for="contact">Email lub telefon</label>
+      <input type="text" id="contact" name="Kontakt" required>
+    </div>
+    <div class="field">
+      <label for="topic">Co Cię interesuje</label>
+      <input type="text" id="topic" name="Temat" placeholder="Podróż, szkolenie, wydarzenie firmowe...">
+    </div>
+    <div class="field">
+      <label for="message">Opowiedz więcej</label>
+      <textarea id="message" name="Wiadomość" placeholder="Czego szukasz, dla kogo, kiedy..."></textarea>
+    </div>
+    <p style="text-align: center; margin-top: 28px;">
+      <button type="submit" class="cta">Wyślij</button>
+    </p>
+  </form>
+</section>
+
+<section class="section-alt">
+  <div class="section-inner" style="text-align: center; max-width: 720px;">
+    <div class="section-label">KONTAKT BEZPOŚREDNI</div>
+    <h2>Lub napisz mi bezpośrednio</h2>
+    <div class="contact-info">
+      <span>📞 <a href="tel:+48573830100">+48 573 830 100</a></span>
+      <span>✉️ <a href="mailto:hello@movelearnlive.com">hello@movelearnlive.com</a></span>
+      <span>📍 Słubice, Polska</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Move.Learn.Live · Natalia Potaman · Słubice, Polska
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
